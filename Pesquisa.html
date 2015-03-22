@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agenda de Contatos</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Agenda Contatos On-Line
+                    </a>
+                </li>
+				<li>
+                    <a  href="Index.html" >Home</a>
+                </li>
+                <li>
+                    <a  href="Cadastro.html" >Cadastrar Contatos</a>
+                </li>
+                <li>
+                    <a href="Pesquisa.html">Pesquisar Contatos</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <form class="form-horizontal" action="resultado_pesquisa_contatos.php" method="POST"align=center>
+								<fieldset>
+
+								<!-- Form Name -->
+								<legend>Pesquisar Contatos</legend>
+								<!-- Text input-->
+								<div class="control-group">
+								  <label class="control-label" for="pesquisa">Pesquisa</label>
+								  <div class="controls">
+									<input id="pesquisa" name="pesquisa" type="text" placeholder="Pesquisar" class="input-xlarge">
+									
+								  </div>
+								</div>
+								<!-- Multiple Radios -->
+								<div class="control-group" >
+									  <label class="control-label" for="tipo"></label>
+									  <div class="controls">
+										<label class="radio" for="tipo-0">
+										  <input type="radio" name="tipo" id="tipo-0" value="nome" checked="checked">
+										  Nome
+										</label>
+										<label class="radio" for="tipo-1">
+										  <input type="radio" name="tipo" id="tipo-1" value="telefone">
+										  Telefone
+										</label>
+										<label class="radio" for="tipo-2">
+										  <input type="radio" name="tipo" id="tipo-2" value="email">
+										  E-mail
+										</label>
+									  </div>
+									</div>
+
+									<!-- Button -->
+									<div class="control-group">
+									  <label class="control-label" for="enviar"></label>
+									  <div class="controls">
+										<button id="enviar" name="enviar" class="btn btn-primary">Pesquisar</button>
+									  </div>
+									</div>
+
+									</fieldset>
+							</form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
